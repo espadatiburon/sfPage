@@ -1,0 +1,168 @@
+<!DOCTYPE html> 
+
+<!--This is a website that shows a bit about the popular video game franchise, Street Fighter. It mainly has pictures to show users how Street Fighter 2 works and provides links to other 
+sources of information for Street Fighter 2 and it's popular successors. I also included a very popular moment from competitive Street Fighter history.-->
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Street Fighter II</title>
+		<style type = "text/css">
+		h1{
+			text-align: center;
+			color: blue;
+			text-transform: uppercase;
+			text-decoration: underline;
+		}
+		body {
+			background-image: url("https://vignette2.wikia.nocookie.net/streetfighter/images/8/8b/Th_Ryu_special_hurricanekick.gif/revision/latest?cb=20100403213247"), url("http://vignette1.wikia.nocookie.net/streetfighter/images/2/2c/Ryu-sf2-shoryuken.gif/revision/latest?cb=20091125000852");
+			background-size: 100px 80px, 90px 80px;
+			background-position: 30% 0%, 70% 0%;
+			background-repeat: no-repeat;
+			background-color: #F5DEB3;
+		}
+		</style>
+	</head>
+	<body>
+		<h1>Street Fighter Games</h1>
+		
+		<img id = "myImage" src = "https://segamadebaddecisions.files.wordpress.com/2012/06/sf2hf-move-list-a3.jpg" width="1414" height="1000" alt = "Character Moves">
+		
+		<p>
+		<b>More About The Game:</b>
+		<button onclick = "SF2();">About SFII</button>
+		<button onclick = "myHTP();">How To Play</button>
+		<button onclick = "myMoves();">Character Movelists</button>
+		</p>
+		
+		<p>
+		<b>Other Popular Street Fighter Games:</b>
+		<button onclick = "SF3();">Street Fighter III: 3rd Strike</button>
+		<button onclick = "SF4();">Street Fighter IV</button>
+		<button onclick = "SF5();">Street Fighter V</button>
+		</p>
+		
+		<p>
+		<b>The Most Famous Street Fighter Moment:</b>
+		<button onclick = "Evo37();">Evo Moment #37</button>
+		</p>
+		
+		<p>
+		<button onclick = "window.open('https://en.wikipedia.org/wiki/Street_Fighter')">About Street Fighter Series</button>
+		<!--No function for this button because all it's going to do is link to the wikipedia page for Street Fighter, not change the picture or anything else.-->
+		</p>
+		
+		<!--This is background music from Street Fighter games. It changes with the game that the user clicks. Purposely hidden, so the user can't pause it.-->
+		<embed id="myBGM" src ="SF2.mp3" type="audio/mp3" hidden="true">
+		
+		<script>
+		<!--Each button has functions because when the button is pressed, I want it to do multiple things, instead of just linking to the page.-->
+		function Evo37()
+		{
+			var myImage = document.getElementById('myImage');
+			var mySound = document.getElementById('myBGM');
+			myImage.src = "http://i1.wp.com/shoryuken.com/wp-content/uploads/2017/01/evo-2017-logo.jpg";
+			myImage.style.width= '1414px'; 
+			myImage.style.height= '1000px'; 
+			myImage.alt = "sf2";
+			window.open('https://www.youtube.com/watch?v=KS7hkwbKmBM');
+			mySound.src = " ";
+			mySound.load();
+			mySound.play();
+		}
+		function SF2()
+		{
+			var myImage = document.getElementById('myImage');
+			var mySound = document.getElementById('myBGM');
+			myImage.src = "http://www.fightersgeneration.com/nx4/game/sf2turbo-arcade-selectionscreen.JPG";
+			myImage.style.width= '1414px'; 
+			myImage.style.height= '1000px'; 
+			myImage.alt = "sf2";
+			window.open('https://en.wikipedia.org/wiki/Street_Fighter_II:_The_World_Warrior');
+			if(mySound.src.indexOf("SF2.mp3") == -1)
+			{
+				mySound.src = "SF2.mp3";
+				mySound.load();
+				mySound.play();
+			}
+		}
+		function SF3()
+		{
+			var myImage = document.getElementById('myImage');
+			var mySound = document.getElementById('myBGM');
+			myImage.src = "https://i.ytimg.com/vi/Qw88zQTxq48/maxresdefault.jpg";
+			myImage.style.width= '1414px'; 
+			myImage.style.height= '1000px'; 
+			myImage.alt = "sf3";
+			window.open('http://streetfighter.wikia.com/wiki/Street_Fighter_III:_3rd_Strike');
+			if(mySound.src.indexOf("SF3.mp3") == -1)
+			{
+				mySound.src = "SF3.mp3";
+				mySound.load();
+				mySound.play();
+			}
+		}
+		function SF4()
+		{
+			var myImage = document.getElementById('myImage');
+			var mySound = document.getElementById('myBGM');
+			myImage.src = "https://i.ytimg.com/vi/bSvCrRd7zHM/maxresdefault.jpg";
+			myImage.style.width= '1414px'; 
+			myImage.style.height= '1000px'; 
+			myImage.alt = "sf4";
+			window.open('http://streetfighter.wikia.com/wiki/Street_Fighter_IV');
+			if(mySound.src.indexOf("SF4.mp3") == -1)
+			{
+				mySound.src = "SF4.mp3";
+				mySound.load();
+				mySound.play();
+			}
+		}
+		function SF5()
+		{
+			var myImage = document.getElementById('myImage');
+			var mySound = document.getElementById('myBGM');
+			myImage.src = "http://game.capcom.com/manual/sfv/en-us/img/1_1_2_1.jpg";
+			myImage.style.width= '1414px'; 
+			myImage.style.height= '1000px'; 
+			myImage.alt = "sf5";
+			window.open('http://streetfighter.wikia.com/wiki/Street_Fighter_V');
+			if(mySound.src.indexOf("SF5.mp3") == -1)
+			{
+				mySound.src = "SF5.mp3";
+				mySound.load();
+				mySound.play();
+			}
+		}
+		function myHTP()
+		{
+			var myImage = document.getElementById('myImage');
+			var mySound = document.getElementById('myBGM');
+			myImage.src = "http://i.imgur.com/hnmQpgN.jpg";
+			myImage.style.width = '679px';
+			myImage.style.height = '1000px';
+			myImage.alt = "How To Play"
+			if(mySound.src.indexOf("SF2.mp3") == -1)
+			{
+				mySound.src = "SF2.mp3";
+				mySound.load();
+				mySound.play();
+			}
+		}
+		function myMoves()
+		{
+			var myImage = document.getElementById('myImage');
+			var mySound = document.getElementById('myBGM');
+			myImage.src = "https://segamadebaddecisions.files.wordpress.com/2012/06/sf2hf-move-list-a3.jpg"; 
+			myImage.style.width= '1414px'; 
+			myImage.style.height= '1000px'; 
+			myImage.alt = "Character Moves";
+			if(mySound.src.indexOf("SF2.mp3") == -1)
+			{
+				mySound.src = "SF2.mp3";
+				mySound.load();
+				mySound.play();
+			}
+		}
+		</script>
+	</body>
+</html>
